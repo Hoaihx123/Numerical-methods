@@ -1,4 +1,4 @@
-)# numerical_methods
+# numerical_methods
 ![image](https://github.com/Hoaihx123/numerical_methods/assets/99666261/62c80a27-28f9-427d-b6b9-269046ebe749)
 # метод простой итерации
 ![image](https://github.com/Hoaihx123/numerical_methods/assets/99666261/e065c323-f2a0-4511-b74f-825847a7a417)

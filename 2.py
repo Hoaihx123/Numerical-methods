@@ -30,20 +30,27 @@ x = float(input("x0="))
 y = float(input("y0="))
 z = float(input("z0="))
 e = float(input("e="))
-A = numpy.matrix([[f1x(x, y, z), f1y(x, y, z), f1z(x, y, z)], [f2x(x, y, z), f2y(x, y, z), f2z(x, y, z)], [f3x(x, y, z), f3y(x, y, z), f3z(x, y, z)]])
+print('x=', x, 'y=', y, 'z=', z, 'f1=', f1(x, y, z),
+      'f2=', f2(x, y, z), 'f3=', f3(x, y, z))
+A = numpy.matrix([[f1x(x, y, z), f1y(x, y, z), f1z(x, y, z)],
+                  [f2x(x, y, z), f2y(x, y, z), f2z(x, y, z)],
+                  [f3x(x, y, z), f3y(x, y, z), f3z(x, y, z)]])
 B = numpy.array([-f1(x, y, z), -f2(x, y, z), -f3(x, y, z)])
 delta = numpy.linalg.solve(A, B)
 x = x + delta[0]
 y = y + delta[1]
 z = z + delta[2]
-print(x, y, z, f1(x, y, z), f2(x, y, z), f3(x, y, z))
+print('x=', x, 'y=', y, 'z=', z, 'f1=', f1(x, y, z),
+      'f2=', f2(x, y, z), 'f3=', f3(x, y, z))
 
 while (delta[0]*delta[0]+delta[1]*delta[1]+delta[2]*delta[2]>e*e):
-    A = numpy.matrix([[f1x(x, y, z), f1y(x, y, z), f1z(x, y, z)], [f2x(x, y, z), f2y(x, y, z), f2z(x, y, z)],
-                     [f3x(x, y, z), f3y(x, y, z), f3z(x, y, z)]])
+    A = numpy.matrix([[f1x(x, y, z), f1y(x, y, z), f1z(x, y, z)],
+                      [f2x(x, y, z), f2y(x, y, z), f2z(x, y, z)],
+                      [f3x(x, y, z), f3y(x, y, z), f3z(x, y, z)]])
     B = numpy.array([-f1(x, y, z), -f2(x, y, z), -f3(x, y, z)])
     delta = numpy.linalg.solve(A, B)
     x = x + delta[0]
     y = y + delta[1]
     z = z + delta[2]
-    print(x, y, z, f1(x, y, z), f2(x, y, z), f3(x, y, z))
+    print('x=', x, 'y=', y, 'z=', z, 'f1=', f1(x, y, z), 'f2=',
+          f2(x, y, z), 'f3=', f3(x, y, z))
